@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="taxApp">
+
+<head>
+  <!-- CSS  -->
+  <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+ 
+  <!-- SCRIPTS -->
+  <script src="/assets/js/angular.min.js"></script>
+  <script src="/assets/js/angular-route.min.js"></script>
+  <script src="/assets/js/jquery-3.3.1.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+ 
+</head>
+
+<!-- define angular controller -->
+<body ng-controller="mainController">
+
+  <!-- this is where header html will be injected -->
+  <header-directive></header-directive>
+
+  <div id="main">
+		<!-- this is where content will be injected depending on selected view -->
+    <div ng-view></div>
+  </div>
+
+  <!-- this is where footer html will be injected    -->
+  <footer-directive></footer-directive>
+ 
+</body>
+
+</html>

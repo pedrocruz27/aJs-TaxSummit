@@ -1,0 +1,22 @@
+.navbar-black {
+    background-color: #4A4A4A;
+    border-color: #4A4A4A;
+}
+
+.nav>li>a {
+    color: white; 
+}
+
+#jumboHome {
+    /* The image used */
+    background-image: url("../img/sampleLisbon.jpg");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
