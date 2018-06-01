@@ -1,3 +1,8 @@
+#headerNav {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
 .navbar-black {
     background-color: #4A4A4A;
     border-color: #4A4A4A;
@@ -5,6 +10,19 @@
 
 .nav>li>a {
     color: white; 
+}
+
+#headerNav li:last-child {
+    margin-left: 100px;
+}
+
+#selectLanguage {
+    background-color: #D0509C;
+    border: none;
+    color: white;
+    margin-top: 8px;
+    width:66px;
+    height:34px;
 }
 
 #jumboHome {
