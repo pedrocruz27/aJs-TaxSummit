@@ -1,3 +1,34 @@
+/* Load fonts */
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Medium;
+    src: url(../fonts/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url(../fonts/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: BenchNine-Light;
+    src: url(../fonts/BenchNine-Light.ttf);
+}
+
+@font-face {
+    font-family: BenchNine-Regular;
+    src: url(../fonts/BenchNine-Regular.ttf);
+}
+
+@font-face {
+    font-family: BenchNine-Bold;
+    src: url(../fonts/BenchNine-Bold.ttf);
+}
+
 #headerNav {
     margin-bottom: 0;
     border-radius: 0;
@@ -9,7 +40,7 @@
 }
 
 .nav>li>a {
-    color: white; 
+    color: white;
 }
 
 #headerNav li:last-child {
@@ -38,3 +69,45 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+#jumboHome h1 {
+    font-size: 106px;
+    font-family: BenchNine-Bold, sans-serif;
+    color: #26ABE2;
+}
+
+#jumboHome h2 {
+    font-size: 62px;
+    font-family: BenchNine-Bold, sans-serif;
+    color: #3F4756;
+}
+
+.homeBigTitle {
+    font-family: BenchNine-Bold, sans-serif;
+    color: #00ADEE;
+    margin-bottom: 50px;
+    font-size: 50px;
+}
+
+#whatIsContainer {
+    margin-bottom: 50px;
+}
+
+#whatIsContainer p {
+    font-family: Roboto-Light, sans-serif;
+    font-size: 27px;
+    color: #7E888B;
+}
+
+#activitiesContainer h2 {
+    font-family: Roboto-Medium, sans-serif;
+    font-size: 25px;
+    color: #3F4756;
+}
+
+#activitiesContainer p {
+    font-family: Roboto-Regular, sans-serif;
+    font-size: 22px;
+    color: #3F4756;
+}
+
