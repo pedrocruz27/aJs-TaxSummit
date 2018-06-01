@@ -82,6 +82,12 @@
     color: #3F4756;
 }
 
+#jumboHome h3 {
+    font-size: 38px;
+    font-family: BenchNine-Bold, sans-serif;
+    color: #3F4756;
+}
+
 .homeBigTitle {
     font-family: BenchNine-Bold, sans-serif;
     color: #00ADEE;
@@ -109,5 +115,9 @@
     font-family: Roboto-Regular, sans-serif;
     font-size: 22px;
     color: #3F4756;
+}
+
+.timerNumber {
+    color: white;
 }
 
