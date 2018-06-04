@@ -89,6 +89,13 @@ var translationsEN = {
 
 
 	taxApp.controller('Ctrl', ['$translate', '$scope', function ($translate, $scope) {
+ 
+		$scope.languages = [
+			{name:'EN', value:'en'},
+			{name:'DE', value:'de'},
+		  ]
+		  
+		$scope.selectedLanguage = 'en';
 
 		$scope.changeLanguage = function (langKey) {
 		  $translate.use(langKey);

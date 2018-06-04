@@ -11,10 +11,11 @@
         <li><a href="#!calendar"> Calendar</a></li>
         <li><a href="#!help"> Help</a></li>
         <li>
-          <select class="form-control" id="selectLanguage">
-            <option>EN</option>
-            <option>PT</option>
-          </select>
+    
+          <select class="form-control" id="selectLanguage"
+           ng-options="opt.value as opt.name for opt in languages" 
+           ng-model="selectedLanguage" ng-change="changeLanguage(selectedLanguage)"></select>
+
         </li>
       </ul>
     </div>
