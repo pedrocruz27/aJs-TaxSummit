@@ -13,6 +13,7 @@
   <!-- SCRIPTS -->
   <script src="/assets/js/angular.min.js"></script>
   <script src="/assets/js/angular-route.min.js"></script>
+  <script src="https://cdn.rawgit.com/angular-translate/bower-angular-translate/2.18.1/angular-translate.js"></script>
   <script src="/assets/js/jquery-3.3.1.min.js"></script>
   <script src="/assets/js/bootstrap.min.js"></script>
   <script src="script.js"></script>
@@ -22,10 +23,11 @@
 
 <!-- define angular controller -->
 <body ng-controller="mainController">
+  <div ng-controller="Ctrl">
 
   <!-- this is where header html will be injected -->
   <header-directive></header-directive>
-
+  
   <div id="main">
 		<!-- this is where content will be injected depending on selected view -->
     <div ng-view></div>
@@ -33,6 +35,8 @@
 
   <!-- this is where footer html will be injected    -->
   <footer-directive></footer-directive>
+
+</div>
  
 </body>
 
