@@ -74,18 +74,21 @@
     font-size: 106px;
     font-family: BenchNine-Bold, sans-serif;
     color: #26ABE2;
+    text-transform: uppercase;
 }
 
 #jumboHome h2 {
     font-size: 62px;
     font-family: BenchNine-Bold, sans-serif;
     color: #3F4756;
+    text-transform: uppercase;
 }
 
 #jumboHome h3 {
     font-size: 38px;
     font-family: BenchNine-Bold, sans-serif;
     color: #3F4756;
+    text-transform: uppercase;
 }
 
 .homeBigTitle {
@@ -115,6 +118,19 @@
     font-family: Roboto-Regular, sans-serif;
     font-size: 22px;
     color: #3F4756;
+}
+
+
+ul#timerCountdownList li {
+    display: inline-block;
+    background-color: #26ABE2;
+    padding: 28px 20px 28px 20px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+ul#timerCountdownLegend li {
+    display: inline-block;
 }
 
 .timerNumber {
