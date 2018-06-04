@@ -10,6 +10,11 @@
 }
 
 @font-face {
+    font-family: Roboto-Bold;
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
     font-family: Roboto-Light;
     src: url(../fonts/Roboto-Light.ttf);
 }
@@ -27,6 +32,10 @@
 @font-face {
     font-family: BenchNine-Bold;
     src: url(../fonts/BenchNine-Bold.ttf);
+}
+
+.customCentered {
+    max-width: 90% !important   ;
 }
 
 #headerNav {
@@ -124,16 +133,37 @@
 ul#timerCountdownList li {
     display: inline-block;
     background-color: #26ABE2;
-    padding: 28px 20px 28px 20px;
+    padding: 11px 17px 11px 17px;
     border-radius: 5px;
     margin-right: 15px;
 }
+
+ul#timerCountdownList li:last-child {
+    margin-right: 0;
+} 
 
 ul#timerCountdownLegend li {
     display: inline-block;
 }
 
+
 .timerNumber {
     color: white;
+    font-size: 38px;
+    font-family: Roboto-Regular, sans-serif;
+}
+
+.timerLegend {
+    color: white;
+    font-size: 11px;
+    margin-right: 90px;
+    font-family: Roboto-Bold, sans-serif;
+}
+
+.timerDots {
+    font-size: 30px;
+    color: #26ABE2;
+    position: relative;
+    right: 5px;
 }
 
