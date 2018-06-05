@@ -23,7 +23,7 @@ var translationsEN = {
 	
   };
   
-  var translationsPT= {
+  var translationsPT = {
 
 	//header
 	HEADER_CONFERENCES: "Conferências",
