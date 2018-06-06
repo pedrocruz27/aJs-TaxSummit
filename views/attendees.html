@@ -1,0 +1,13 @@
+<div class="container-fluid customCentered">
+	<h1>Forms</h1>
+	<form name="myForm">
+	First Name: <input type="text" ng-model="firstname">
+	Email: <input type="email" name="myInput" ng-model="myInput">
+
+	</form>
+		  <h1>You entered: {{firstname}}</h1>
+		  <p>The input's email is:</p>
+<h1>{{myForm.myInput.$valid}}</h1>
+<p>Note that the state of the input field is "true" before you start writing in it, even if it does not contain an e-mail address.</p>
+
+</div>
