@@ -62,9 +62,9 @@ var translationsEN = {
 			})
 
 			// route for the about page
-			.when('/about', {
-				templateUrl : 'views/about.html',
-				controller  : 'aboutController'
+			.when('/attendees', {
+				templateUrl : 'views/attendees.html',
+				controller  : 'attendeesController'
 			})
 
 				// route for the conferences page
@@ -104,7 +104,7 @@ var translationsEN = {
 		$scope.message = 'Everyone come and see how good I look!';
 	});
 
-	taxApp.controller('aboutController', function($scope) {
+	taxApp.controller('attendeesController', function($scope) {
 		$scope.message = 'Look! I am an about page.';
 	});
 
