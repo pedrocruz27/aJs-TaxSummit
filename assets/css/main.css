@@ -148,6 +148,10 @@ body {
     color: #3F4756;
 }
 
+#activitiesContainer {
+   margin-bottom: 200px;
+}
+
 
 ul#timerCountdownList li {
     display: inline-block;
@@ -222,18 +226,46 @@ footer nav li {
     color: white;
 }
 
-.slantedDivA {
+.slantedDicussing {
+    margin-top: -90px;
+    margin-bottom: 100px;
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    box-sizing: border-box;
+    padding-top: 70px;
+    z-index: 1;
+}
+
+.slantedDicussing:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: white;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: top right;
+    transform: skewY(-2deg);
+    z-index: -1;
+}
+
+.slantedJoinUs {
     margin-top:100px;
     margin-bottom: 200px;
     position: relative;
     width: 100%;
-    height: 400px;
+    height: auto;
     background-color: transparent;
     box-sizing: border-box;
     padding-top: 50px;
+    color: white;
 }
 
-.slantedDivA:after {
+.slantedJoinUs:after {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -248,30 +280,4 @@ footer nav li {
     z-index: -1;
 }
 
-.slantedDivB {
-    margin-top: -90px;
-    margin-bottom: 100px;
-    position: relative;
-    width: 100%;
-    height: 400px;
-    background-color: transparent;
-    box-sizing: border-box;
-    padding-top: 70px;
-    z-index: 1;
-}
-
-.slantedDivB:after {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    content: '';
-    background-color: white;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform: top right;
-    transform: skewY(-2deg);
-    z-index: -1;
-}
 
