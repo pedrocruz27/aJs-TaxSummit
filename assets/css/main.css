@@ -248,7 +248,6 @@ footer nav li {
     right: 0;
     bottom: 0;
     left: 0;
-    transform: top right;
     transform: skewY(-2deg);
     z-index: -1;
 }
@@ -275,9 +274,18 @@ footer nav li {
     right: 0;
     bottom: 0;
     left: 0;
-    transform: top right;
     transform: skewY(-2deg);
     z-index: -1;
 }
 
+/* special css for footer when in smaller dimensions */
+@media only screen and (max-width: 766px) {
+    .slantedFooter {
+        height: 310px;
+    }
+
+    .slantedJoinUs {
+        margin-bottom: 300px;
+    }
+}
 
