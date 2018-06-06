@@ -167,8 +167,39 @@ ul#timerCountdownLegend li {
     right: 5px;
 }
 
+
+.slantedFooter {
+    position: relative;
+    width: 100%;
+    height: 130px;
+    padding-top: 50px;
+    background-color: black;
+    margin-top: 100px;
+    box-sizing: border-box;    
+}
+
+.slantedFooter:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: inherit;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom left ;
+    transform: skewY(-2deg);
+}
+
+footer nav li {
+    color: white;
+}
+
 .slantedDivA {
     margin-top:100px;
+    margin-bottom: 100px;
     position: relative;
     width: 100%;
     height: 400px;
@@ -188,7 +219,7 @@ ul#timerCountdownLegend li {
     bottom: 0;
     left: 0;
     transform: top right;
-    transform: skewY(-4deg);
+    transform: skewY(-2deg);
     z-index: -1;
 }
 
@@ -215,43 +246,7 @@ ul#timerCountdownLegend li {
     bottom: 0;
     left: 0;
     transform: top right;
-    transform: skewY(-4deg);
-    z-index: -1;
-}
-
-.slantedDivC {
-    position: relative;
-    width: 100%;
-    height: 100px;
-    background-color: transparent;
-    box-sizing: border-box;
-    padding-top: 70px;
-    z-index: 1;
-    top: 56px;
-}
-
-.slantedDivC:after {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    content: '';
-    background-color: white;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform: top right;
     transform: skewY(-2deg);
     z-index: -1;
-}
-
-footer {
-    height: 200px;
-    padding-top: 100px;
-    background-color: black;
-}
-
-footer nav li {
-    color: white;
 }
 
