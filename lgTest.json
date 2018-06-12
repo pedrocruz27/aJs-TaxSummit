@@ -1,0 +1,45 @@
+{
+    "translations_en":{
+        "HEADER_CONFERENCES": "Conferences",
+        "HEADER_ATENDEES": "Atendees",
+        "HEADER_SPEAKERS": "Speakers",
+        "HEADER_CALENDAR": "Calendar",
+        "HEADER_HELP": "Help",
+        "HOME_JUMBO_SLOGAN": "The Challanges of a Digital World",
+        "HOME_JUMBO_DATE": "Lisbon 23-25 October",
+        "HOME_JUMBO_DAYS": "Days",
+        "HOME_JUMBO_HOURS": "Hours",
+        "HOME_JUMBO_MINUTES": "Minutes",
+
+        "HOME_WHAT_IS": "What is the Tax Summit?",
+
+        "HOME_DISCOVER_ACTIVITIES": "Take a look at our activities",
+        "HOME_ACTIVITIES_TALKS": "Talks",
+        "HOME_ACTIVITIES_PROGRAM": "Program",
+        "HOME_ACTIVITIES_SPEAKERS": "Speakers"
+
+    },
+    "translations_pt": {
+        "HEADER_CONFERENCES": "Conferências",
+        "HEADER_ATENDEES": "Participantes",
+        "HEADER_SPEAKERS": "Oradores",
+        "HEADER_CALENDAR": "Calendário",
+        "HEADER_HELP": "Ajuda",
+        "HOME_JUMBO_SLOGAN": "Os Desafios do Mundo Digital",
+        "HOME_JUMBO_DATE": "Lisboa 23-25 Outubro",
+        "HOME_JUMBO_DAYS": "Dias",
+        "HOME_JUMBO_HOURS": "Horas",
+        "HOME_JUMBO_MINUTES": "Minutos",
+
+        "HOME_WHAT_IS": "O que é a Tax Summit?",
+
+        "HOME_DISCOVER_ACTIVITIES": "Descobre as nossas atividades",
+        "HOME_ACTIVITIES_TALKS": "Discursos",
+        "HOME_ACTIVITIES_PROGRAM": "Programa",
+        "HOME_ACTIVITIES_SPEAKERS": "Oradores"
+
+    },
+    "newOne": {
+        "helloTest":"Hey you did it! :)"
+    }
+ }

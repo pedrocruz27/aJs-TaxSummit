@@ -1,55 +1,18 @@
-var translationsEN = {
+//language object
+function myLang(key, lang) {
+	this.key = key;
+	this.lang = lang;
+}
+//array to store languages
+var langArray = [];
 
-	//header
-	HEADER_CONFERENCES: "Conferences",
-	HEADER_ATENDEES: "Atendees",
-	HEADER_SPEAKERS: "Speakers",
-	HEADER_CALENDAR: "Calendar",
-	HEADER_HELP: "Help",
+//just the key of the language
+var myArray = ["en", "pt"];
 
-	//home
-	HOME_JUMBO_SLOGAN: "The Challanges of a Digital World",
-	HOME_JUMBO_DATE: "Lisbon 23-25 October",
-	HOME_JUMBO_DAYS: "Days",
-	HOME_JUMBO_HOURS: "Hours",
-	HOME_JUMBO_MINUTES: "Minutes",
-
-	HOME_WHAT_IS: "What is the Tax Summit?",
-
-	HOME_DISCOVER_ACTIVITIES: "Take a look at our activities",
-	HOME_ACTIVITIES_TALKS: "Talks",
-	HOME_ACTIVITIES_PROGRAM: "Program",
-	HOME_ACTIVITIES_SPEAKERS: "Speakers"
-	
-  };
-  
-  var translationsPT = {
-
-	//header
-	HEADER_CONFERENCES: "Conferências",
-	HEADER_ATENDEES: "Participantes",
-	HEADER_SPEAKERS: "Oradores",
-	HEADER_CALENDAR: "Calendário",
-	HEADER_HELP: "Ajuda",
-
-	//home
-	HOME_JUMBO_SLOGAN: "Os Desafios do Mundo Digital",
-	HOME_JUMBO_DATE: "Lisboa 23-25 Outubro",
-	HOME_JUMBO_DAYS: "Dias",
-	HOME_JUMBO_HOURS: "Horas",
-	HOME_JUMBO_MINUTES: "Minutos",
-
-	HOME_WHAT_IS: "O que é a Tax Summit?",
-
-	HOME_DISCOVER_ACTIVITIES: "Descobre as nossas atividades",
-	HOME_ACTIVITIES_TALKS: "Discursos",
-	HOME_ACTIVITIES_PROGRAM: "Programa",
-	HOME_ACTIVITIES_SPEAKERS: "Oradores"
-
-  };
-	
-	// create the module and name it taxApp
+// create the module and name it taxApp
 	var taxApp = angular.module('taxApp', ['ngRoute', 'pascalprecht.translate']);
+
+	taxApp.constant('translations', {});
 
 	// configure our routes 
 	taxApp.config(function($routeProvider) {
@@ -76,11 +39,55 @@ var translationsEN = {
 
 	//configure our translations
 	taxApp.config(['$translateProvider', function ($translateProvider) {
-		// add translation tables
-		$translateProvider.translations('en', translationsEN);
-		$translateProvider.translations('pt', translationsPT);
-		$translateProvider.fallbackLanguage('en');
+
 		$translateProvider.preferredLanguage('en');
+		$translateProvider.useLoader('customLoader');
+		$translateProvider.forceAsyncReload(true);
+		
+	  }]);
+
+
+	  //it loads the first translations
+	  taxApp.factory('customLoader', function ($q, translations) {
+		return function (options) {
+		  var deferred = $q.defer();
+		  if(translations[options.key] === undefined){
+				for( i = 0; i < myArray.length; i++) {
+					jQuery.ajax({
+						type: "GET",
+						url: 'http://localhost:3000/translations_' + myArray[i],
+						async: false,
+						success: function(data) {
+							translations[myArray[i]] = data;
+							deferred.resolve(data);
+							langArray.push(new myLang(myArray[i], data));						
+						}
+					});	
+				}
+		  }
+		  else
+		  {
+				deferred.resolve(translations[options.key]);		
+		  }	  
+		  console.log(translations);
+		  return deferred.promise;
+		}
+	});
+
+	//service to add more translations after inital ones
+	taxApp.service('translateServ', ['translations', '$translate',  function (translations, $translate) {
+		var obj1, obj2, sum;
+		this.addTranslation = function(lang, trans){
+			for (var i in langArray) {
+				if (langArray[i].key == lang) {
+					obj1 = langArray[i].lang; 
+				}
+			}
+			obj2 = trans;
+			sum = $.extend( obj1, obj2);
+			translations[lang] = sum;
+			$translate.refresh();
+		}
 	  }]);
 
 
@@ -104,17 +111,18 @@ var translationsEN = {
 		$scope.message = 'Everyone come and see how good I look!';
 	});
 
-	taxApp.controller('attendeesController', function($scope) {
+	taxApp.controller('attendeesController', function($scope, $http) {
 		$scope.message = 'Look! I am an about page.';
+
 	});
 
 	taxApp.controller('conferencesController', function($scope) {
 		$scope.message = 'Look! I am the conferences page.';
 	});
 
-
+	
 	//changes language via the selected dropdown in the header
-	taxApp.controller('Ctrl', ['$translate', '$scope', function ($translate, $scope) {
+	taxApp.controller('Ctrl', ['$translate', '$scope', 'translations','translateServ', function ($translate, $scope, translations, translateServ) {
  
 		$scope.languages = [
 			{name:'EN', value:'en'},
@@ -126,7 +134,20 @@ var translationsEN = {
 		$scope.changeLanguage = function (langKey) {
 		  $translate.use(langKey);
 		};
-	  }]);
+	  
+		$scope.addMultiTranslation = function(){
+			var engTrans = {
+				"HEADLINE": "Hello there! (changed)"
+				};
+			var ptTrans = {
+				"HEADLINE": "Tasse bem??! (mudado)"
+				};
+			translateServ.addTranslation("en", engTrans);
+			translateServ.addTranslation("pt", ptTrans);
+		}
+		
+	}]);
+
 
 
 	

@@ -1,13 +1,32 @@
 <div class="container-fluid customCentered">
 	<h1>Forms</h1>
-	<form name="myForm">
-	First Name: <input type="text" ng-model="firstname">
-	Email: <input type="email" name="myInput" ng-model="myInput">
+	<form name="userForm">
+		<div class="form-group">
+		  <div>
+			<input type="text" class="form-control" placeholder="Username" ng-model="formData.username" required />
+		  </div>
+		  <div>
+			<input type="email" id="email" name="email" class="form-control" placeholder="Email Address" ng-model="formData.email" required />
+		  </div>
+		  <div>
+			<input name="password" type="password" class="form-control" placeholder="Password" ng-model="formData.password" ng-pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z])/" required />
+			<span ng-show="!userForm.password.$error.required &&  userForm.password.$error.pattern && userForm.password.$dirty">Must contain one lower &amp; uppercase letter, and one non-alpha character (a number or a symbol.)</span>
+		  </div>
+		  <div>
+			<input name="confirm_password" type="password" class="form-control" placeholder="Confirm Password" ng-model="formData.confirmPassword" ng-pattern="formData.password" required />
+			<span ng-show="formData.password != formData.confirmPassword">Your passwords must match.</span>
+		  </div>
+		  <div>
+			<button type="submit" id="create-user-button" ng-disabled="formData.password != formData.confirmPassword" ng-click="createUser()">Create User</button>
+		  </div>
+		</div>
+	  </form>
+		  
 
-	</form>
-		  <h1>You entered: {{firstname}}</h1>
-		  <p>The input's email is:</p>
-<h1>{{myForm.myInput.$valid}}</h1>
-<p>Note that the state of the input field is "true" before you start writing in it, even if it does not contain an e-mail address.</p>
+<h1>Yo2: {{ 'HEADLINE' | translate }}</h1>
+
+<button ng-click="addMultiTranslation()">click me</button>
+
+
 
 </div>
