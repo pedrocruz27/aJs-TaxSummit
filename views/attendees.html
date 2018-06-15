@@ -4,9 +4,11 @@
 		<div class="form-group">
 		  <div>
 			<input type="text" class="form-control" placeholder="Username" ng-model="formData.username" required />
+			<span ng-show="userForm.username.$touched">The name is required.</span>
 		  </div>
 		  <div>
 			<input type="email" id="email" name="email" class="form-control" placeholder="Email Address" ng-model="formData.email" required />
+			<span ng-show="!userForm.email.$valid && userForm.email.$dirty">Must be a valid email</span>
 		  </div>
 		  <div>
 			<input name="password" type="password" class="form-control" placeholder="Password" ng-model="formData.password" ng-pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z])/" required />
@@ -22,6 +24,8 @@
 		</div>
 	  </form>
 		  
+
+		<h1 translate="HEADLINE"></h1>
 
 <h1>Yo2: {{ 'HEADLINE' | translate }}</h1>
 

@@ -1,21 +1,21 @@
 /* My custom javascript, jQuery*/
 $( document ).ready(function() {
 
-    $(window).on('load',function(){
-        $('#login-modal').modal({
-            backdrop: 'static',
-            keyboard: false  // to prevent closing with Esc button (if you want this too)
-        })
-         $('#login-modal').modal('show');   
-    });
+    // $(window).on('load',function(){
+    //     $('#login-modal').modal({
+    //         backdrop: 'static',
+    //         keyboard: false  // to prevent closing with Esc button (if you want this too)
+    //     })
+    //      $('#login-modal').modal('show');   
+    // });
 
-    $('.loginmodal-submit').click(function() {
-        username = $("#modal-username").val() ;
-        password = $("#modal-password").val();
-        if(username == "tax" && password == "tax1") {
-            $('#login-modal').modal('hide');
-        }
-    });
+    // $('.loginmodal-submit').click(function() {
+    //     username = $("#modal-username").val() ;
+    //     password = $("#modal-password").val();
+    //     if(username == "tax" && password == "tax1") {
+    //         $('#login-modal').modal('hide');
+    //     }
+    // });
 
 
     updateTimerCoundown();

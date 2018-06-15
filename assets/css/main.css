@@ -103,6 +103,7 @@ body {
 #jumboHome {
     /* The image used */
     /* background-image: url("../img/sampleLisbon.jpg"); */
+    background-color: #a0a0a0;
 
     /* Set a specific height */
     min-height: 700px; 
@@ -112,6 +113,16 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#imgJumboContainer {
+    height:80%;
+    width:80%;
+    background: white;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    padding: 15%;
 }
 
 #jumboHome h1 {
@@ -278,11 +289,11 @@ footer nav li {
 
 .slantedDicussing:before {
     position: absolute;
-    width: 10%;
+    width: 10.1%;
     height: 100%;
     content: '';
     background-color: white;
-    top: -20px;
+    top: -3.5%;
     right: 0;
     bottom: 0;
     transform: skewY(3.5deg);
@@ -443,5 +454,86 @@ footer nav li {
     display: inline-block;
     opacity: 0.6;
     transition: opacity ease 0.5s;
-  } 
+  }
+  
+  #cubos_01 {
+    position: absolute;
+    height: 100px;
+    bottom: 102%;
+    left: 85%;
+    overflow: hidden;
+  }
+
+  #cubos_02 {
+    position: absolute;
+    left: 85%;
+    bottom: 90%;
+    height: 100px;
+  }
+
+  #cubos_03 {
+    position: absolute;
+    height: 70px;
+  }
+
+  #lisbonVideo {
+      padding-bottom: 50px;
+      position: relative;
+  }
+
+  .form-control {
+      margin-bottom: 10px;
+  }
+
+@media only screen and (max-width: 1566px) {
+    .timerNumber {
+        font-size: 18px;
+    }
+
+    ul#timerCountdownList li {
+        padding: 6px 12px 6px 12px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .centerJumbo {
+        margin-top: 0;
+    }
+
+    .slantedDicussing:before {     
+        top: -2.1%;     
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #cubos_01 {
+        left: 65%;
+        bottom: 100%;
+    }
+
+    .slantedDicussing:before {     
+        top: -1.0%;     
+    }
+}
+
+@media only screen and (max-width: 425px) {
+
+    #cubos_01 {
+        display: none;
+    }
+
+    #cubos_02 {
+        left: 65%;
+        bottom: 92%;
+    }
+
+    .slantedDicussing:before {     
+        top: -0.5%;     
+    }
+
+    #jumboHome h2 {
+        font-size: 40px;
+    }
+}
+  
   

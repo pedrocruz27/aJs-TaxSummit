@@ -43,7 +43,8 @@ var myArray = ["en", "pt"];
 		$translateProvider.preferredLanguage('en');
 		$translateProvider.useLoader('customLoader');
 		$translateProvider.forceAsyncReload(true);
-		
+		$translateProvider.useSanitizeValueStrategy('escape');
+
 	  }]);
 
 
@@ -69,7 +70,6 @@ var myArray = ["en", "pt"];
 		  {
 				deferred.resolve(translations[options.key]);		
 		  }	  
-		  console.log(translations);
 		  return deferred.promise;
 		}
 	});
